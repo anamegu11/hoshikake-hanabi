@@ -1,0 +1,53 @@
+#about {
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    background-color: #fff;
+    padding: 100px 0;
+    margin-bottom: 100px;
+    position: relative;
+    @include sp {
+        clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+    }
+    .section-inner {
+        display: flex;
+        justify-content: space-between;
+        @include sp {
+            flex-direction: column;
+            align-items: center;
+        } 
+    }
+    .section-text {
+        padding-right: 50px;
+        @include sp {
+        padding-right: 0;
+        }
+    }
+    .about-img {
+        width: calc(330 / 760 * 100%);
+        position: relative;
+        @include sp {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        img {
+            &:first-child {
+                @include sp {
+                    width: 70%;
+                }
+            }
+            &:last-child {
+                width: 85%;
+                position: absolute;
+                top: 80%;
+                left: 55%;
+                transform: translate(-50%, -50%);
+                @include sp {
+                    width: 60%;
+                    top: 85%;
+                    left: 30%;
+                    transform: translate(0%, -55%);
+                }
+            }
+        }
+    }
+}

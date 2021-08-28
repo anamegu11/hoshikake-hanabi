@@ -1,0 +1,85 @@
+#main-visual {
+    height: 100vh;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    margin-bottom: 100px;
+    @include sp  {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    }
+    .slider {
+    }
+    li {
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100vh;
+        }
+        .reverse {
+            transform: scale(-1, 1);
+        }
+    }
+    .copy-cont {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(0%, -50%);
+        text-align: left;
+        @include tab {
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .main-copy {
+        text-shadow: 1px 2px 15px #001556;
+        line-height: 1.2;
+        white-space: nowrap;
+        margin-bottom: 50px;
+        @include sp {
+            margin-bottom: 30px;
+        }
+        .en-copy {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            @include tab {
+                font-size: 4rem;
+            }
+            @include sp {
+                font-size: 3rem;
+            }
+            span {
+                font-size: 3.5rem;
+                @include tab {
+                    font-size: 2rem;
+                }
+                @include sp {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .jp-copy {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: cl(yellow);
+            @include sp {
+                font-size: 1.125rem;
+                white-space: wrap;
+            }
+        }
+    }
+    .fas.fa-angle-double-down {
+        font-size: 2.5rem;
+        text-shadow: 1px 2px 8px #001556;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(0%, -50%);
+        text-align: center;
+        @include tab {
+            font-size: 2rem;
+            top: 85%;
+        }
+    }
+}

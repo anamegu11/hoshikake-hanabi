@@ -1,0 +1,67 @@
+#manners {
+    margin-bottom: 100px;
+    position: relative;
+    .manners-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include sp {
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+    }
+    .manners-item {
+        width: calc(33.3333% - 40px * 2 / 3);
+        &:nth-of-type(-n+3) {
+            margin-bottom: 50px;
+        }
+        @include sp {
+            width: 80%;
+            margin-bottom: 50px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .manners-img {
+        width: 130px;
+        border: 10px solid cl(blue);
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 17px;
+        @include sp {
+            width: 120px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 120%;
+            height: 10px;
+            background-color: cl(blue);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: rotate(45deg);
+        }
+    }
+    .manners-text {
+        line-height: 1.7;
+    }
+    .manners-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: cl(yellow);
+        text-align: center;
+        margin-bottom: 5px;
+        @include sp {
+            font-size: 1rem;
+        }
+    }
+    .manners-desc {
+        font-size: 0.875rem;
+        text-align: justify;
+    }
+}

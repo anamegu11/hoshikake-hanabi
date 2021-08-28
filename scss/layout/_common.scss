@@ -1,0 +1,190 @@
+.site-title {
+    width: 70px;
+    line-height: 1px;
+    a {
+        display: block;
+    }
+}
+
+.common-btn {
+    color: cl(black);
+    font-weight: bold;
+    font-size: 1.125rem;
+    background-color: cl(yellow);
+    box-shadow: 0px 0px 8px #a1a8c0;
+    border: 1px solid cl(yellow);
+    border-radius: 25px;
+    width: 428px;
+    padding: 10px 0;
+    transition: .3s;
+    display: block;
+    text-align: center;
+    &:hover {
+        border: 1px solid cl(yellow);
+        color: cl(yellow);
+        background-color: initial;
+    }
+    @include tab {
+        font-size: 1.125rem;
+        &:hover {
+            color: cl(black);
+            background-color: cl(yellow);
+        }
+    }
+    @include sp {
+        width: 300px;
+        margin: 0 auto;
+    }
+    @include sp-min {
+        width: 250px;
+        font-size: 1rem;
+    }
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color:#fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    @include sp {
+        font-size: 2rem;
+        text-align: left;
+        &::after {
+            width: 70%;
+        }
+    }
+}
+
+.section-title.center {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color:#fff;
+        position: absolute;
+        top: 100%;
+        left: 25%;
+    }
+    @include sp {
+        font-size: 2rem;
+        text-align: left;
+        &::after {
+            width: 70%;
+            left: 0;
+        }
+    }
+}
+
+.section-title.black {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color:cl(black);
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    @include sp {
+        font-size: 2rem;
+        text-align: left;
+        &::after {
+            width: 70%;
+        }
+    }
+}
+
+.section-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.section-bag {
+    display: inline-block;
+    font-size: 8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: -.05em;
+    color: rgba(58, 143, 183, .12);
+    @include tab {
+        font-size: 7.5rem;
+    }
+    @include sp {
+        font-size: 6.25rem;
+        color: rgba(58, 143, 183, .08);
+    }
+    @include sp-min {
+        display: none;
+    }
+}
+
+.text-right {
+    transform: rotate(90deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 100px;
+    left: 95%;
+    z-index: -1;
+}
+
+.text-left {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 100px;
+    left: 15%;
+    z-index: -1;
+    @include tab {
+        left: 20%;
+    }
+    @include sp {
+        left: 25%;
+    }
+}
+
+.section-text {
+    width: calc(430 / 760 * 100%);
+    margin-bottom: 50px;
+    @include sp  {
+        width: 100%;
+    }
+}
+
+.section-desc {
+    padding-top: 15px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.black {
+ color: cl(black);
+}
+
+.yellow-line {
+    font-weight: bold;
+    background: linear-gradient(transparent 40%, cl(yellow) 40%);
+    @include sp {
+        font-size: 1.125rem;
+    }
+}

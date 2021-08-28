@@ -1,0 +1,162 @@
+#access {
+  margin-bottom: 100px;
+  position: relative;
+  @include sp {
+    margin-bottom: 50px;
+  }
+  .section-text {
+    line-height: 1.7;
+    width: 100%;
+  }
+  .section-desc {
+    span {
+      font-weight: bold;
+      color: cl(yellow);
+    }
+  }
+  .access-flex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 760px;
+    margin: 0 auto;
+    @include sp {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  .left-box {
+    flex: 1;
+    .map {
+      width: 100%;
+      margin-bottom: 28px;
+    }
+  }
+  .hotel-info {
+    position: relative;
+    transition: .3s;
+    @include sp {
+      margin-bottom: 28px;
+    }
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.3;
+    }
+    &:hover {
+      opacity: .7;
+    }
+  }
+  .right-box {
+    padding-left: 40px;
+    @include sp {
+      padding-left: 0;
+    }
+  }
+
+  /* --------------------------------------------
+  form
+  --------------------------------------------- */
+  .from-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .tableArea {
+    font-size: 0.875rem;
+    background-color: #fff;
+    color: cl(black);
+    table-layout: fixed;
+    margin-bottom: 25px;
+    @include sp {
+      width: 100%;
+      table-layout: initial;
+    }
+  }
+   /* --- ヘッダーのスタイル指定 ------------------- */
+  .tableArea th {
+    text-align: center;
+    padding: 10px 15px;
+    border: 1px #AFAFAF solid;
+    color: #fff;
+    span {
+      font-size: 1.125rem;
+      font-weight: bold;
+      @include sp-min {
+        font-size: 0.875rem;
+      }
+    }
+  }
+   /* --- 明細のスタイル指定 ----------------------- */
+  .tableArea td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px 20px;
+    border: 1px #AFAFAF solid;
+    p {
+      display: inline-block;
+      line-height: 1.4;
+      span {
+        display: inline-block;
+      }
+    }
+    .time-bold {
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 1.4;
+      @include sp {
+        font-size: 1.125rem;
+      }
+    }
+  }
+   /* --- 明細のｎ行スタイル指定 ------------------- */
+  .th-red {
+    background-color: #CB4042;
+  }
+  .th-green {
+    background-color: #1B813E;
+  }
+  .th-blue {
+    background-color: cl(blue);
+  }
+  .td-gray {
+    background-color: #E3E3E3;
+  }
+  .fa-angle-right {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+  }
+
+  .common-min-btn {
+    color: cl(yellow);
+    border: 1px solid cl(yellow);
+    box-shadow: 0px 0px 8px #a1a8c0;
+    border-radius: 25px;
+    padding: 10px 0;
+    transition: .3s;
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-bottom: 60px;
+    &:hover {
+      color: cl(black);
+      background-color: cl(yellow);
+      @include tab {
+        color: cl(yellow);
+        border: 1px solid cl(yellow);
+        background-color: cl(black);
+      }
+    }
+    @include sp {
+      width: 300px;
+      margin: 0 auto 50px auto;
+    }
+    @include sp-min {
+      width: 280px;
+    }
+  }
+}

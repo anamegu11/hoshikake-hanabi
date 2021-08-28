@@ -1,0 +1,71 @@
+#contact {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+    background-color: #fff;
+    padding: 100px 0;
+    position: relative;
+    @include sp {
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+    }
+    .section-desc {
+        margin-bottom: 20px;
+    }
+    .address {
+        display: inline-block;
+        line-height: 1.5;
+        color: cl(black);
+        padding: 20px;
+        border: 1px solid cl(blue);
+    }
+    .common-btn.blue {
+        color: cl(yellow);
+        background-color: cl(blue);
+        border: 1px solid cl(blue);
+        border-radius: 25px;
+        padding: 10px;
+        margin: 0 auto 30px auto;
+        pointer-events:none;
+        &:hover {
+            border: 1px solid cl(black);
+            color: cl(yellow);
+            background-color: cl(black);
+        }
+        span {
+            font-size: 0.875rem;
+        }
+        @include tab {
+            pointer-events: auto;
+            &:hover {
+                color: cl(yellow);
+                background-color: cl(blue);
+                border: 1px solid cl(blue);
+            }
+        }
+        @include sp {
+            padding: 10px 20px;
+        }
+    }
+    .common-btn {
+        margin: 0 auto;
+        padding: 10px;
+        &:hover {
+            border: 1px solid cl(black);
+            color: cl(yellow);
+            background-color: cl(black);
+        }
+        @include tab {
+            &:hover {
+                color: cl(black);
+                background-color: cl(yellow);
+                border: 1px solid cl(yellow);
+            }
+        }
+        @include sp {
+            padding: 10px 20px;
+            font-size: 0.875rem;
+            letter-spacing: -.001rem;
+        }
+    }
+    .section-bag {
+        font-size: 6.25rem;
+    }
+}

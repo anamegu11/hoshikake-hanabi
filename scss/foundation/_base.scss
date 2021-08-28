@@ -1,0 +1,36 @@
+// COLORS
+// @include cl(black);
+//--------------------------------------------------
+
+$colors: (
+	white: #fff,
+	black: #0B1013,
+    blue: #3A8FB7,
+	yellow: #F9F871,
+);
+
+@function cl($key) {
+	@return map-get($colors, $key);
+}
+
+// RESPONSIVE
+// @include tab
+//--------------------------------------------------
+
+@mixin tab {
+	@media print,screen and (max-width: 959px) {
+		@content;
+	}
+}
+
+@mixin sp {
+	@media print,screen and (max-width: 519px) {
+		@content;
+	}
+}
+
+@mixin sp-min {
+	@media print,screen and (max-width: 320px) {
+		@content;
+	}
+}
